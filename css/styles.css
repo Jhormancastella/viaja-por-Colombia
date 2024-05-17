@@ -1,0 +1,40 @@
+/* Establecer estilos globales */
+* {
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para imágenes */
+img {
+    padding: 2px;
+    border: 5px solid yellow;
+}
+
+/* Estilos para secciones */
+.section {
+    padding: 2px;
+}
+
+/* Estilos para el cuerpo */
+body {
+    background-color: rgb(181, 232, 241);
+    
+}
+/* Estilos para el pie de pagina */
+footer {
+    background-color: #14491d;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+header {
+    background-color: #d52222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

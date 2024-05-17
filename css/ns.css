@@ -1,0 +1,77 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+header {
+    background-color: #006411;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+section ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+section ul li a:hover {
+    text-decoration: underline;
+}
+
+.galeria div,
+.gastronomia div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.galeria img,
+.gastronomia img {
+    border: solid rgb(from rgb(60, 255, 0) r g b);
+    border-radius: 30px;
+    width: auto; /* Ajusta el ancho automáticamente */
+    height: 200px; /* Establece una altura fija para las imágenes */
+    margin-right: 10px; /* Espacio entre las imágenes */
+}
+
+footer {
+    background-color: #14491d;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos específicos */
+
+figure,img{
+    width: 125px;
+}
