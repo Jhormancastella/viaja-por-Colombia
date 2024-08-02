@@ -15,3 +15,26 @@ git clone https://github.com/Jhormancastella/viaja-por-Colombia/blob/main/am.htm
 | 3 | Chachapoyas |
 | 4 | Galería|
 | 5 | Gastronomía |
+
+## codigo en base a 
+- html
+- css
+- recursos/imagenes
+
+
+Hecho por (jhorman jesus castellanos morales )
+
+> [!NOTE]
+>en el mapa se encuentran marcados con los nombres de las ubicaiones
+
+> [!TIP]
+> 
+
+> [!IMPORTANT]  
+> 
+
+> [!WARNING]  
+> 
+
+> [!CAUTION]
+> 
