@@ -1,4 +1,4 @@
-# 🗺️ Viaja por Colombia
+# 🗺️ Conoce Colombia
 
 > Sitio web educativo e interactivo que explora los **32 departamentos de Colombia** a través de mapas, puntos de interés, galerías fotográficas y gastronomía regional.
 
