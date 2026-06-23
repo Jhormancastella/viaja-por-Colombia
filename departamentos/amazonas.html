@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Amazonas - Viaja por Colombia</title>
+    <style>:root { --dept-color: #3fc2ff; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Amazonas</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+
+    <!-- HERO -->
+    <div class="dept-hero">
+        <div class="dept-hero-map">
+            <canvas data-dept="amazonas" data-color="#3fc2ff" data-size="130"></canvas>
+        </div>
+        <div class="dept-hero-info">
+            <h2>Amazonas</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🌿 Amazonía</span>
+                <span class="dept-badge">🏛 Capital: Leticia</span>
+                <span class="dept-badge">🌡 Tropical húmedo</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABS -->
+    <nav class="dept-tabs">
+        <a href="#info"        class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares"     class="dept-tab">📍 Lugares</a>
+        <a href="#galeria"     class="dept-tab">🖼 Galería</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+
+    <div class="page-wrap">
+
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Leticia</span></div>
+                <div class="info-item"><strong>Región</strong><span>Amazonía</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>2</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Amazónico/a</span></div>
+                <div class="info-item"><strong>Área</strong><span>109,665 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Tropical húmedo · 26 °C prom.</span></div>
+            </div>
+        </section>
+
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Parque Nacional Natural Amacayacu</li>
+                <li>Lago Tarapoto</li>
+                <li>Leticia y el Puerto Fluvial</li>
+                <li>Isla de los Micos</li>
+                <li>Comunidades indígenas Tikuna</li>
+            </ul>
+        </section>
+
+        <section id="galeria" class="galeria">
+            <h2>🖼️ Galería</h2>
+            <div class="img-grid">
+                <a href="../img/parque nacional natural amaca.jpg">
+                    <img src="../img/parque nacional natural amaca.jpg" alt="Parque Nacional Natural Amacayacu" loading="lazy">
+                    <span class="img-caption">Parque Amacayacu</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+                <a href="../img/lago tarapa.jpeg">
+                    <img src="../img/lago tarapa.jpeg" alt="Lago Tarapoto" loading="lazy">
+                    <span class="img-caption">Lago Tarapoto</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+                <a href="../img/Chachapoyas.jpg">
+                    <img src="../img/Chachapoyas.jpg" alt="Leticia" loading="lazy">
+                    <span class="img-caption">Leticia</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="gastronomia" class="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🐟</span>
+                    <div class="plato-text">
+                        <strong>Patarashca</strong>
+                        <span>Pescado envuelto en hojas de bijao y asado al fuego, plato ancestral indígena.</span>
+                    </div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🐠</span>
+                    <div class="plato-text">
+                        <strong>Pirarucú</strong>
+                        <span>El pez más grande del Amazonas, preparado ahumado, frito o en caldo.</span>
+                    </div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍌</span>
+                    <div class="plato-text">
+                        <strong>Tacacho</strong>
+                        <span>Bolas de plátano verde asado mezcladas con manteca, acompañado de cecina.</span>
+                    </div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🫓</span>
+                    <div class="plato-text">
+                        <strong>Casabe</strong>
+                        <span>Pan plano crujiente elaborado con yuca brava, base alimentaria indígena.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="img-grid" style="margin-top:14px">
+                <a href="../img/patarashca.webp">
+                    <img src="../img/patarashca.webp" alt="Patarashca" loading="lazy">
+                    <span class="img-caption">Patarashca</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+                <a href="../img/Pirarucú.webp">
+                    <img src="../img/Pirarucú.webp" alt="Pirarucú" loading="lazy">
+                    <span class="img-caption">Pirarucú</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+                <a href="../img/tacacho.webp">
+                    <img src="../img/tacacho.webp" alt="Tacacho" loading="lazy">
+                    <span class="img-caption">Tacacho</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="site-footer">
+        <p>© 2026 Viaja por Colombia · Amazonas</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

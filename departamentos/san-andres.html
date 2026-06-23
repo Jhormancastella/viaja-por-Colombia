@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>San Andrés - Viaja por Colombia</title>
+    <style>:root { --dept-color: #06b6d4; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>San Andrés</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="san-andres" data-color="#06b6d4" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>San Andrés y Providencia</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🏝️ Insular</span>
+                <span class="dept-badge">🏛 Capital: San Andrés</span>
+                <span class="dept-badge">🌡 Tropical · 28 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>San Andrés</span></div>
+                <div class="info-item"><strong>Región</strong><span>Insular</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>2</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Sanandresano/a · Raizal</span></div>
+                <div class="info-item"><strong>Área</strong><span>52 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Tropical insular · 28 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Mar de los 7 Colores</li>
+                <li>Johnny Cay — Islote paradisíaco</li>
+                <li>Providencia — Isla tranquila</li>
+                <li>Cueva de Morgan</li>
+                <li>La Piscinita — Piscina natural</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🦞</span>
+                    <div class="plato-text"><strong>Rondón</strong><span>Sopa caribeña con caracol, langosta, cangrejo, ñame y leche de coco. Plato raizal.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🦀</span>
+                    <div class="plato-text"><strong>Crab Soup</strong><span>Sopa de cangrejo negro en leche de coco, receta tradicional raizal.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🥥</span>
+                    <div class="plato-text"><strong>Coconut Bread</strong><span>Pan de coco artesanal horneado, acompañante de todos los platos isleños.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🐟</span>
+                    <div class="plato-text"><strong>Pescado con Patacones</strong><span>Pescado frito del Caribe con patacones de plátano verde y ensalada.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · San Andrés</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

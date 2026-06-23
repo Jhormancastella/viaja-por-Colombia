@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Atlántico - Viaja por Colombia</title>
+    <style>:root { --dept-color: #e8962e; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Atlántico</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="atlantico" data-color="#e8962e" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Atlántico</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🏖️ Caribe</span>
+                <span class="dept-badge">🏛 Capital: Barranquilla</span>
+                <span class="dept-badge">🌡 Cálido · 28 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Barranquilla</span></div>
+                <div class="info-item"><strong>Región</strong><span>Caribe</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>23</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Atlanticense</span></div>
+                <div class="info-item"><strong>Área</strong><span>3,388 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Cálido seco · 28 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Carnaval de Barranquilla — Patrimonio UNESCO</li>
+                <li>Bocas de Ceniza</li>
+                <li>Puerto Colombia</li>
+                <li>Museo del Caribe</li>
+                <li>Estadio Metropolitano</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🍲</span>
+                    <div class="plato-text"><strong>Sancocho de Guandú</strong><span>Sopa de frijol guandú con carne de cerdo y plátano, sabor costeño auténtico.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🌭</span>
+                    <div class="plato-text"><strong>Butifarra</strong><span>Embutido de cerdo artesanal típico de Soledad, se come con bollo de yuca.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🐟</span>
+                    <div class="plato-text"><strong>Viuda de Bocachico</strong><span>Pescado cocinado al vapor sobre piedras calientes con vegetales.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍚</span>
+                    <div class="plato-text"><strong>Arroz con Coco</strong><span>Arroz cocinado en leche de coco, acompañante clásico de la cocina caribeña.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Atlántico</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

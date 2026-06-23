@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Antioquia - Viaja por Colombia</title>
+    <style>:root { --dept-color: #c1cf00; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Antioquia</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+
+    <div class="dept-hero">
+        <div class="dept-hero-map">
+            <canvas data-dept="antioquia" data-color="#c1cf00" data-size="130"></canvas>
+        </div>
+        <div class="dept-hero-info">
+            <h2>Antioquia</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🏔️ Andina</span>
+                <span class="dept-badge">🏛 Capital: Medellín</span>
+                <span class="dept-badge">🌡 Templado · 22 °C</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="dept-tabs">
+        <a href="#info"        class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares"     class="dept-tab">📍 Lugares</a>
+        <a href="#galeria"     class="dept-tab">🖼 Galería</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+
+    <div class="page-wrap">
+
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Medellín</span></div>
+                <div class="info-item"><strong>Región</strong><span>Andina</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>125</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Antioqueño/a - Paisa</span></div>
+                <div class="info-item"><strong>Área</strong><span>63,612 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Templado · 22 °C prom.</span></div>
+            </div>
+        </section>
+
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Plaza Botero — Medellín</li>
+                <li>Parque Arví</li>
+                <li>Guatapé y El Peñón</li>
+                <li>Jardín Botánico de Medellín</li>
+                <li>Parque Acuático Kanaloa</li>
+                <li>Parroquia Santa Ana</li>
+            </ul>
+        </section>
+
+        <section id="galeria" class="galeria">
+            <h2>🖼️ Galería</h2>
+            <div class="img-grid">
+                <a href="../img/plazabotero.jpg">
+                    <img src="../img/plazabotero.jpg" alt="Plaza Botero" loading="lazy">
+                    <span class="img-caption">Plaza Botero</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+                <a href="../img/Kanaloa Parque Acuático.jpeg">
+                    <img src="../img/Kanaloa Parque Acuático.jpeg" alt="Parque Kanaloa" loading="lazy">
+                    <span class="img-caption">Kanaloa</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+                <a href="../img/parroquia santa ana.jpeg">
+                    <img src="../img/parroquia santa ana.jpeg" alt="Parroquia Santa Ana" loading="lazy">
+                    <span class="img-caption">Parroquia Santa Ana</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="gastronomia" class="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🍳</span>
+                    <div class="plato-text">
+                        <strong>Bandeja Paisa</strong>
+                        <span>El plato emblema de Antioquia: frijoles, arroz, carne molida, chicharrón, huevo, plátano, aguacate y arepa.</span>
+                    </div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍲</span>
+                    <div class="plato-text">
+                        <strong>Sancocho Antioqueño</strong>
+                        <span>Sopa contundente con mazorca, papa, yuca, plátano verde y carne de res.</span>
+                    </div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🥘</span>
+                    <div class="plato-text">
+                        <strong>Mondongo</strong>
+                        <span>Sopa de tripa de res con papa, zanahoria, tomate y cilantro, receta de la abuela.</span>
+                    </div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🫓</span>
+                    <div class="plato-text">
+                        <strong>Arepa Paisa</strong>
+                        <span>Arepa blanca delgada, crujiente por fuera, tierna por dentro. Base de todo desayuno.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="img-grid" style="margin-top:14px">
+                <a href="../img/bandeja-paisa.jpg">
+                    <img src="../img/bandeja-paisa.jpg" alt="Bandeja Paisa" loading="lazy">
+                    <span class="img-caption">Bandeja Paisa</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+                <a href="../img/sancocho-antioqueno.jpg">
+                    <img src="../img/sancocho-antioqueno.jpg" alt="Sancocho Antioqueño" loading="lazy">
+                    <span class="img-caption">Sancocho</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+                <a href="../img/mondongo.jpg">
+                    <img src="../img/mondongo.jpg" alt="Mondongo" loading="lazy">
+                    <span class="img-caption">Mondongo</span>
+                    <span class="close-badge" aria-hidden="true">×</span>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Antioquia</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

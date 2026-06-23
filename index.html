@@ -1,35 +1,443 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <title>Conoce Colombia — 32 Departamentos</title>
 </head>
 <body>
-    <header>
-        <h1>Viaja y conoce Colombia</h1>
-        <br>
-        <hr>
+
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a href="index.html" class="site-logo-link">
+                <img src="img/favicon.svg" alt="" class="site-favicon" aria-hidden="true">
+                <div class="site-logo-text">
+                    <span class="site-logo-main">Conoce Colombia</span>
+                    <span class="site-logo-sub">32 departamentos · 1 país</span>
+                </div>
+            </a>
+        </div>
     </header>
-    <br>
-    <div>
-        <img src="img/colde.jpg" usemap="#image-map">        
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <span class="hero-eyebrow">🇨🇴 Turismo colombiano</span>
+            <h1>Explora los 32 departamentos</h1>
+            <p>Paisajes, cultura y gastronomía única en cada rincón del país más biodiverso del mundo.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">32</span>
+                    <span class="hero-stat-label">Departamentos</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">6</span>
+                    <span class="hero-stat-label">Regiones</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">1,142</span>
+                    <span class="hero-stat-label">Municipios</span>
+                </div>
+            </div>
+            <a href="#departamentos" class="hero-cta">Ver departamentos ↓</a>
+        </div>
+        <div class="hero-map">
+            <img src="img/colombia-mapa-relieve-sombreado-mapa-altura-color-mar-fondo-azul-ilustracion-3d_394271-3167.avif"
+                 alt="Mapa de Colombia en alto relieve"
+                 class="hero-map-img">
+        </div>
+    </section>
+
+    <!-- GRID -->
+    <!-- REGION FILTER BAR -->
+    <div class="region-bar" role="navigation" aria-label="Filtrar por región">
+        <div class="region-bar-inner">
+            <span class="region-bar-label">Explorar por región</span>
+            <div class="region-pills">
+                <button class="rpill active" data-region="all">
+                    <span class="rpill-icon">🗺️</span>
+                    <span>Todos</span>
+                </button>
+                <button class="rpill rpill-amazonia" data-region="amazonia">
+                    <span class="rpill-icon">🌿</span>
+                    <span>Amazonía</span>
+                </button>
+                <button class="rpill rpill-andina" data-region="andina">
+                    <span class="rpill-icon">🏔️</span>
+                    <span>Andina</span>
+                </button>
+                <button class="rpill rpill-caribe" data-region="caribe">
+                    <span class="rpill-icon">🏖️</span>
+                    <span>Caribe</span>
+                </button>
+                <button class="rpill rpill-orinoquia" data-region="orinoquia">
+                    <span class="rpill-icon">🐄</span>
+                    <span>Orinoquía</span>
+                </button>
+                <button class="rpill rpill-pacifico" data-region="pacifico">
+                    <span class="rpill-icon">🌊</span>
+                    <span>Pacífica</span>
+                </button>
+                <button class="rpill rpill-andpac" data-region="andina-pacifico">
+                    <span class="rpill-icon">🌄</span>
+                    <span>And./Pacífico</span>
+                </button>
+                <button class="rpill rpill-insular" data-region="insular">
+                    <span class="rpill-icon">🏝️</span>
+                    <span>Insular</span>
+                </button>
+            </div>
+        </div>
     </div>
 
+    <main id="departamentos" class="dept-grid" aria-label="Departamentos de Colombia">
 
-    <map name="image-map">
-        <area target="" alt="Ns" title="Ns" href="ns.html" coords="376,261,38" shape="circle">
-        <area target="" alt="am" title="am" href="am.html" coords="453,830,96" shape="circle">
-        <area target="" alt="mt" title="mt" href="mt.html" coords="366,557,106" shape="circle">
-        <area target="" alt="vh" title="vh" href="vh.html" coords="487,574,711,368" shape="rect">
-        <area target="" alt="an" title="an" href="an.html" coords="220,349,97" shape="circle">
-    </map>
-    <footer>
-        <div class="section">
-            <p>Desarrollado por Jhorman Jesús Castellanos Morales</p>
-            <p>Todos los derechos reservados</p>
+        <a href="departamentos/amazonas.html"         class="dept-card" data-dept="amazonas"           data-region="amazonia"       data-color="#3fc2ff">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Amazonas</h3>
+                <span class="card-region">Amazonía</span>
+                <p class="card-food">🍽 Patarashca · Pirarucú</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/antioquia.html"        class="dept-card" data-dept="antioquia"          data-region="andina"         data-color="#c1cf00">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Antioquia</h3>
+                <span class="card-region">Andina</span>
+                <p class="card-food">🍽 Bandeja Paisa · Mondongo</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/arauca.html"           class="dept-card" data-dept="arauca"             data-region="orinoquia"      data-color="#2e8b57">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Arauca</h3>
+                <span class="card-region">Orinoquía</span>
+                <p class="card-food">🍽 Mamona · Hayaca llanera</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/atlantico.html"        class="dept-card" data-dept="atlantico"          data-region="caribe"         data-color="#e8962e">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Atlántico</h3>
+                <span class="card-region">Caribe</span>
+                <p class="card-food">🍽 Sancocho de guandú · Butifarra</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/bolivar.html"          class="dept-card" data-dept="bolivar"            data-region="caribe"         data-color="#a8324e">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Bolívar</h3>
+                <span class="card-region">Caribe</span>
+                <p class="card-food">🍽 Mote de queso · Carimañola</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/boyaca.html"           class="dept-card" data-dept="boyaca"             data-region="andina"         data-color="#6b5ce7">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Boyacá</h3>
+                <span class="card-region">Andina</span>
+                <p class="card-food">🍽 Cocido boyacense · Piquete</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/caldas.html"           class="dept-card" data-dept="caldas"             data-region="andina"         data-color="#f5a623">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Caldas</h3>
+                <span class="card-region">Andina</span>
+                <p class="card-food">🍽 Sancocho de gallina · Arepa</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/caqueta.html"          class="dept-card" data-dept="caqueta"            data-region="amazonia"       data-color="#1e8140">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Caquetá</h3>
+                <span class="card-region">Amazonía</span>
+                <p class="card-food">🍽 Caldo de pirarucú · Casabe</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/casanare.html"         class="dept-card" data-dept="casanare"           data-region="orinoquia"      data-color="#d4503a">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Casanare</h3>
+                <span class="card-region">Orinoquía</span>
+                <p class="card-food">🍽 Mamona · Pisillo de chigüiro</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/cauca.html"            class="dept-card" data-dept="cauca"              data-region="andina-pacifico" data-color="#8b5cf6">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Cauca</h3>
+                <span class="card-region">Andina / Pacífico</span>
+                <p class="card-food">🍽 Tamal caucano · Champús</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/cesar.html"            class="dept-card" data-dept="cesar"              data-region="caribe"         data-color="#e8a817">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Cesar</h3>
+                <span class="card-region">Caribe</span>
+                <p class="card-food">🍽 Cabrito guajiro · Arroz con coco</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/choco.html"            class="dept-card" data-dept="choco"              data-region="pacifico"       data-color="#e85d24">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Chocó</h3>
+                <span class="card-region">Pacífica</span>
+                <p class="card-food">🍽 Tapao de pescado · Pusandao</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/cordoba.html"          class="dept-card" data-dept="cordoba"            data-region="caribe"         data-color="#3a9d5c">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Córdoba</h3>
+                <span class="card-region">Caribe</span>
+                <p class="card-food">🍽 Mote de queso · Suero costeño</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/cundinamarca.html"     class="dept-card" data-dept="cundinamarca"       data-region="andina"         data-color="#c0392b">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Cundinamarca</h3>
+                <span class="card-region">Andina</span>
+                <p class="card-food">🍽 Ajiaco · Cuchuco de trigo</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/guainia.html"          class="dept-card" data-dept="guainia"            data-region="amazonia"       data-color="#0891b2">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Guainía</h3>
+                <span class="card-region">Amazonía</span>
+                <p class="card-food">🍽 Casabe · Pescado del Inírida</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/guaviare.html"         class="dept-card" data-dept="guaviare"           data-region="amazonia"       data-color="#059669">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Guaviare</h3>
+                <span class="card-region">Amazonía</span>
+                <p class="card-food">🍽 Cachama asada · Caldo de piraña</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/huila.html"            class="dept-card" data-dept="huila"              data-region="andina"         data-color="#d97706">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Huila</h3>
+                <span class="card-region">Andina</span>
+                <p class="card-food">🍽 Asado huilense · Bizcocho de achira</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/la-guajira.html"       class="dept-card" data-dept="la-guajira"         data-region="caribe"         data-color="#f59e0b">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>La Guajira</h3>
+                <span class="card-region">Caribe</span>
+                <p class="card-food">🍽 Friche · Chivo guisado</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/magdalena.html"        class="dept-card" data-dept="magdalena"          data-region="caribe"         data-color="#2563eb">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Magdalena</h3>
+                <span class="card-region">Caribe</span>
+                <p class="card-food">🍽 Viuda de pescado · Arroz con coco</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/meta.html"             class="dept-card" data-dept="meta"               data-region="orinoquia"      data-color="#8c2d2d">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Meta</h3>
+                <span class="card-region">Orinoquía</span>
+                <p class="card-food">🍽 Pisillo · Carne a la perra</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/narino.html"           class="dept-card" data-dept="narino"             data-region="andina-pacifico" data-color="#16a34a">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Nariño</h3>
+                <span class="card-region">Andina / Pacífico</span>
+                <p class="card-food">🍽 Cuy asado · Sopa de quinua</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/norte-de-santander.html" class="dept-card" data-dept="norte-de-santander" data-region="andina"      data-color="#006411">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Norte de Santander</h3>
+                <span class="card-region">Andina</span>
+                <p class="card-food">🍽 Mute santandereano · Cabro asado</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/putumayo.html"         class="dept-card" data-dept="putumayo"           data-region="amazonia"       data-color="#0d9488">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Putumayo</h3>
+                <span class="card-region">Amazonía</span>
+                <p class="card-food">🍽 Chontaduro · Pescado de río</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/quindio.html"          class="dept-card" data-dept="quindio"            data-region="andina"         data-color="#22c55e">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Quindío</h3>
+                <span class="card-region">Andina</span>
+                <p class="card-food">🍽 Trucha · Empanada quindiana</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/risaralda.html"        class="dept-card" data-dept="risaralda"          data-region="andina"         data-color="#f97316">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Risaralda</h3>
+                <span class="card-region">Andina</span>
+                <p class="card-food">🍽 Sancocho de gallina · Arepa</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/san-andres.html"       class="dept-card" data-dept="san-andres"         data-region="insular"        data-color="#06b6d4">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>San Andrés</h3>
+                <span class="card-region">Insular</span>
+                <p class="card-food">🍽 Rondón · Crab Soup</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/santander.html"        class="dept-card" data-dept="santander"          data-region="andina"         data-color="#4f46e5">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Santander</h3>
+                <span class="card-region">Andina</span>
+                <p class="card-food">🍽 Mute · Hormigas culonas</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/sucre.html"            class="dept-card" data-dept="sucre"              data-region="caribe"         data-color="#10b981">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Sucre</h3>
+                <span class="card-region">Caribe</span>
+                <p class="card-food">🍽 Mote de queso · Ñame</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/tolima.html"           class="dept-card" data-dept="tolima"             data-region="andina"         data-color="#dc2626">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Tolima</h3>
+                <span class="card-region">Andina</span>
+                <p class="card-food">🍽 Tamal tolimense · Lechona</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/valle-del-cauca.html"  class="dept-card" data-dept="valle-del-cauca"    data-region="andina-pacifico" data-color="#7c3aed">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Valle del Cauca</h3>
+                <span class="card-region">Andina / Pacífico</span>
+                <p class="card-food">🍽 Sancocho valluno · Champús</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/vaupes.html"           class="dept-card" data-dept="vaupes"             data-region="amazonia"       data-color="#0284c7">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Vaupés</h3>
+                <span class="card-region">Amazonía</span>
+                <p class="card-food">🍽 Casabe · Pez bocachico</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+        <a href="departamentos/vichada.html"          class="dept-card" data-dept="vichada"            data-region="orinoquia"      data-color="#991b1b">
+            <div class="card-map"><canvas width="120" height="120"></canvas></div>
+            <div class="card-body">
+                <h3>Vichada</h3>
+                <span class="card-region">Orinoquía</span>
+                <p class="card-food">🍽 Mamona · Casabe llanero</p>
+            </div>
+            <div class="card-bar"></div>
+        </a>
+
+    </main>
+
+    <!-- DATOS CURIOSOS CARRUSEL -->
+    <section class="curiosos-section" aria-label="Datos curiosos de Colombia">
+        <div class="curiosos-inner">
+            <div class="curiosos-header">
+                <span class="curiosos-eyebrow">🧠 ¿Sabías que…?</span>
+                <p class="curiosos-subtitle">Datos curiosos de los 32 departamentos</p>
+            </div>
+            <div class="curiosos-track" id="curiososTrack"></div>
         </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>Desarrollado por Jhorman Jesús Castellanos Morales · Todos los derechos reservados</p>
     </footer>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Vista ampliada">
+    </div>
+
+    <script src="js/dept-coords.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/curiosos.js"></script>
 </body>
 </html>

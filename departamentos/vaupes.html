@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Vaupés - Viaja por Colombia</title>
+    <style>:root { --dept-color: #0284c7; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Vaupés</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="vaupes" data-color="#0284c7" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Vaupés</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🌿 Amazonía</span>
+                <span class="dept-badge">🏛 Capital: Mitú</span>
+                <span class="dept-badge">🌡 Tropical · 27 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Mitú</span></div>
+                <div class="info-item"><strong>Región</strong><span>Amazonía</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>1 + corregimientos</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Vupesino/a</span></div>
+                <div class="info-item"><strong>Área</strong><span>65,268 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Tropical húmedo · 27 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Raudales del Vaupés — Cascadas en el río</li>
+                <li>Comunidades Cubeo y Desano</li>
+                <li>Selva amazónica virgen</li>
+                <li>Río Vaupés — Frontera con Brasil</li>
+                <li>Mitú — Capital más remota de Colombia</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🫓</span>
+                    <div class="plato-text"><strong>Casabe</strong><span>Pan de yuca brava, preparación ancestral indígena de los grupos del Vaupés.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🐟</span>
+                    <div class="plato-text"><strong>Bocachico Asado</strong><span>Pescado del río Vaupés asado en leña con sal y limón.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🌿</span>
+                    <div class="plato-text"><strong>Mañoco</strong><span>Harina de yuca tostada, se come seca o en caldos, base de la dieta indígena.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍌</span>
+                    <div class="plato-text"><strong>Mingao de Chontaduro</strong><span>Bebida espesa de chontaduro fermentado, de sabor intenso y nutritivo.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Vaupés</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

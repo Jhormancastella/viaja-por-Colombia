@@ -1,0 +1,258 @@
+{
+  "amazonas": {
+    "x": 698,
+    "y": 102,
+    "w": 296,
+    "h": 291,
+    "name": "Amazonas",
+    "color": "#3fc2ff"
+  },
+  "antioquia": {
+    "x": 20,
+    "y": 124,
+    "w": 217,
+    "h": 254,
+    "name": "Antioquia",
+    "color": "#c1cf00"
+  },
+  "arauca": {
+    "x": 291,
+    "y": 1517,
+    "w": 183,
+    "h": 193,
+    "name": "Arauca",
+    "color": "#2e8b57"
+  },
+  "atlantico": {
+    "x": 509,
+    "y": 1737,
+    "w": 191,
+    "h": 163,
+    "name": "Atlántico",
+    "color": "#e8962e"
+  },
+  "bolivar": {
+    "x": 817,
+    "y": 1498,
+    "w": 178,
+    "h": 235,
+    "name": "Bolívar",
+    "color": "#a8324e"
+  },
+  "boyaca": {
+    "x": 26,
+    "y": 602,
+    "w": 215,
+    "h": 217,
+    "name": "Boyacá",
+    "color": "#6b5ce7"
+  },
+  "caldas": {
+    "x": 763,
+    "y": 457,
+    "w": 152,
+    "h": 141,
+    "name": "Caldas",
+    "color": "#f5a623"
+  },
+  "caqueta": {
+    "x": 239,
+    "y": 380,
+    "w": 252,
+    "h": 217,
+    "name": "Caquetá",
+    "color": "#1e8140"
+  },
+  "casanare": {
+    "x": 563,
+    "y": 1287,
+    "w": 204,
+    "h": 191,
+    "name": "Casanare",
+    "color": "#d4503a"
+  },
+  "cauca": {
+    "x": 20,
+    "y": 389,
+    "w": 209,
+    "h": 207,
+    "name": "Cauca",
+    "color": "#8b5cf6"
+  },
+  "cesar": {
+    "x": 354,
+    "y": 1278,
+    "w": 176,
+    "h": 198,
+    "name": "Cesar",
+    "color": "#e8a817"
+  },
+  "choco": {
+    "x": 526,
+    "y": 85,
+    "w": 150,
+    "h": 309,
+    "name": "Chocó",
+    "color": "#e85d24"
+  },
+  "cordoba": {
+    "x": 783,
+    "y": 817,
+    "w": 187,
+    "h": 187,
+    "name": "Córdoba",
+    "color": "#3a9d5c"
+  },
+  "cundinamarca": {
+    "x": 770,
+    "y": 637,
+    "w": 248,
+    "h": 170,
+    "name": "Cundinamarca",
+    "color": "#c0392b"
+  },
+  "guainia": {
+    "x": 39,
+    "y": 1285,
+    "w": 233,
+    "h": 191,
+    "name": "Guainía",
+    "color": "#0891b2"
+  },
+  "guaviare": {
+    "x": 800,
+    "y": 1078,
+    "w": 209,
+    "h": 196,
+    "name": "Guaviare",
+    "color": "#059669"
+  },
+  "huila": {
+    "x": 272,
+    "y": 1076,
+    "w": 161,
+    "h": 191,
+    "name": "Huila",
+    "color": "#d97706"
+  },
+  "la-guajira": {
+    "x": 17,
+    "y": 1720,
+    "w": 213,
+    "h": 178,
+    "name": "La Guajira",
+    "color": "#f59e0b"
+  },
+  "magdalena": {
+    "x": 17,
+    "y": 1528,
+    "w": 217,
+    "h": 178,
+    "name": "Magdalena",
+    "color": "#2563eb"
+  },
+  "meta": {
+    "x": 493,
+    "y": 800,
+    "w": 226,
+    "h": 235,
+    "name": "Meta",
+    "color": "#8c2d2d"
+  },
+  "narino": {
+    "x": 524,
+    "y": 409,
+    "w": 157,
+    "h": 200,
+    "name": "Nariño",
+    "color": "#16a34a"
+  },
+  "norte-de-santander": {
+    "x": 457,
+    "y": 1052,
+    "w": 322,
+    "h": 220,
+    "name": "Norte de Santander",
+    "color": "#006411"
+  },
+  "putumayo": {
+    "x": 278,
+    "y": 628,
+    "w": 207,
+    "h": 180,
+    "name": "Putumayo",
+    "color": "#0d9488"
+  },
+  "quindio": {
+    "x": 809,
+    "y": 1343,
+    "w": 165,
+    "h": 133,
+    "name": "Quindío",
+    "color": "#22c55e"
+  },
+  "risaralda": {
+    "x": 535,
+    "y": 648,
+    "w": 187,
+    "h": 146,
+    "name": "Risaralda",
+    "color": "#f97316"
+  },
+  "san-andres": {
+    "x": 741,
+    "y": 1750,
+    "w": 239,
+    "h": 180,
+    "name": "San Andrés",
+    "color": "#06b6d4"
+  },
+  "santander": {
+    "x": 48,
+    "y": 835,
+    "w": 193,
+    "h": 183,
+    "name": "Santander",
+    "color": "#4f46e5"
+  },
+  "sucre": {
+    "x": 317,
+    "y": 1754,
+    "w": 143,
+    "h": 141,
+    "name": "Sucre",
+    "color": "#10b981"
+  },
+  "tolima": {
+    "x": 272,
+    "y": 846,
+    "w": 163,
+    "h": 176,
+    "name": "Tolima",
+    "color": "#dc2626"
+  },
+  "valle-del-cauca": {
+    "x": 254,
+    "y": 146,
+    "w": 241,
+    "h": 213,
+    "name": "Valle del Cauca",
+    "color": "#7c3aed"
+  },
+  "vaupes": {
+    "x": 43,
+    "y": 1048,
+    "w": 191,
+    "h": 217,
+    "name": "Vaupés",
+    "color": "#0284c7"
+  },
+  "vichada": {
+    "x": 504,
+    "y": 1511,
+    "w": 241,
+    "h": 204,
+    "name": "Vichada",
+    "color": "#991b1b"
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Tolima - Viaja por Colombia</title>
+    <style>:root { --dept-color: #dc2626; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Tolima</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="tolima" data-color="#dc2626" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Tolima</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🌋 Andina</span>
+                <span class="dept-badge">🏛 Capital: Ibagué</span>
+                <span class="dept-badge">🌡 Cálido · 26 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Ibagué</span></div>
+                <div class="info-item"><strong>Región</strong><span>Andina</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>47</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Tolimense - Opita</span></div>
+                <div class="info-item"><strong>Área</strong><span>23,562 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Cálido · 26 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Nevado del Tolima — Parque Nacional Los Nevados</li>
+                <li>Valle de San Juan</li>
+                <li>Festival Folclórico Colombiano — Ibagué</li>
+                <li>Honda — Ciudad de los Puentes</li>
+                <li>Prado — Lago y represa</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🫔</span>
+                    <div class="plato-text"><strong>Tamal Tolimense</strong><span>Tamal grande de masa de maíz relleno con pollo, cerdo, papa y arveja.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🐷</span>
+                    <div class="plato-text"><strong>Lechona Tolimense</strong><span>Cerdo entero relleno de arroz, papa, arvejas y especias, asado en horno de barro.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍘</span>
+                    <div class="plato-text"><strong>Bizcocho de Achira</strong><span>Galleta crujiente de almidón de achira, producto artesanal del Valle del Magdalena.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🥤</span>
+                    <div class="plato-text"><strong>Masato de Arroz</strong><span>Bebida fermentada de arroz con panela y canela, tradicional del Tolima Grande.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Tolima</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

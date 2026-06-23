@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Córdoba - Viaja por Colombia</title>
+    <style>:root { --dept-color: #3a9d5c; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Córdoba</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="cordoba" data-color="#3a9d5c" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Córdoba</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🌽 Caribe</span>
+                <span class="dept-badge">🏛 Capital: Montería</span>
+                <span class="dept-badge">🌡 Cálido · 28 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Montería</span></div>
+                <div class="info-item"><strong>Región</strong><span>Caribe</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>30</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Cordobés/a</span></div>
+                <div class="info-item"><strong>Área</strong><span>25,020 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Cálido · 28 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Ciénaga Grande de Lorica</li>
+                <li>Parque Nacional Natural Paramillo</li>
+                <li>Río Sinú — Corredor hídrico</li>
+                <li>Santa Cruz de Lorica — Ciudad Patrimonio</li>
+                <li>Golfo de Morrosquillo</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🍲</span>
+                    <div class="plato-text"><strong>Mote de Queso</strong><span>Sopa espesa de ñame con queso costeño derretido, plato emblemático del Sinú.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🫙</span>
+                    <div class="plato-text"><strong>Suero Costeño</strong><span>Crema láctea fermentada artesanal que acompaña arepas y plátanos.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🐟</span>
+                    <div class="plato-text"><strong>Mojarra Frita</strong><span>Pescado de río frito entero, servido con arroz con coco y patacones.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🫓</span>
+                    <div class="plato-text"><strong>Bollo de Yuca</strong><span>Masa de yuca cocinada en hoja de plátano, acompañante tradicional costeño.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Córdoba</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Guainía - Viaja por Colombia</title>
+    <style>:root { --dept-color: #0891b2; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Guainía</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="guainia" data-color="#0891b2" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Guainía</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🌿 Amazonía</span>
+                <span class="dept-badge">🏛 Capital: Inírida</span>
+                <span class="dept-badge">🌡 Tropical · 26 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Inírida</span></div>
+                <div class="info-item"><strong>Región</strong><span>Amazonía</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>1 + corregimientos</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Guainiano/a</span></div>
+                <div class="info-item"><strong>Área</strong><span>72,238 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Tropical húmedo · 26 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Cerro Mavecure — Formaciones rocosas del Escudo Guayanés</li>
+                <li>Río Inírida y Estrella Fluvial</li>
+                <li>Caño Bocachico</li>
+                <li>Resguardos indígenas Puinave y Curripaco</li>
+                <li>Sabanas de La Fuga</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🫓</span>
+                    <div class="plato-text"><strong>Casabe</strong><span>Pan de yuca brava tostado, alimento fundamental de las comunidades indígenas.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🐟</span>
+                    <div class="plato-text"><strong>Bocachico del Inírida</strong><span>Pescado asado o frito del río Inírida, fresco y con sabor único.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🌿</span>
+                    <div class="plato-text"><strong>Mañoco</strong><span>Harina tostada de yuca, se come con caldo o como acompañante seco.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍌</span>
+                    <div class="plato-text"><strong>Mingao de Chontaduro</strong><span>Bebida espesa de chontaduro fermentado, preparación indígena ancestral.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Guainía</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

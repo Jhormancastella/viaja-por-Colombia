@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Nariño - Viaja por Colombia</title>
+    <style>:root { --dept-color: #16a34a; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Nariño</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="narino" data-color="#16a34a" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Nariño</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🌋 Andina / Pacífico</span>
+                <span class="dept-badge">🏛 Capital: Pasto</span>
+                <span class="dept-badge">🌡 Frío · 14 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Pasto</span></div>
+                <div class="info-item"><strong>Región</strong><span>Andina / Pacífico</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>64</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Nariñense - Pastuso/a</span></div>
+                <div class="info-item"><strong>Área</strong><span>33,268 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Frío · 14 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Volcán Galeras — Activo y majestuoso</li>
+                <li>Laguna de La Cocha</li>
+                <li>Santuario Las Lajas</li>
+                <li>Carnaval de Negros y Blancos — Patrimonio UNESCO</li>
+                <li>Tumaco — Puerto del Pacífico</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🐹</span>
+                    <div class="plato-text"><strong>Cuy Asado</strong><span>Plato ancestral de las culturas andinas, cuy entero asado con papas y maíz.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍲</span>
+                    <div class="plato-text"><strong>Sopa de Quinua</strong><span>Caldo nutritivo de quinua con papas nativas, carne y hierbas de páramo.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🫓</span>
+                    <div class="plato-text"><strong>Pan de Cuajada</strong><span>Pan artesanal de queso fresco, especialidad de las panaderías pastusas.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍮</span>
+                    <div class="plato-text"><strong>Helado de Paila</strong><span>Helado artesanal batido en paila de cobre con hielo y frutas del páramo.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Nariño</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

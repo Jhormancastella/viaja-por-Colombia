@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Mapper — Departamentos</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; display: flex; gap: 0; height: 100vh; overflow: hidden; }
+
+        /* PANEL IZQUIERDO */
+        #panel { width: 320px; min-width: 320px; background: #1e293b; display: flex; flex-direction: column; border-right: 1px solid #334155; }
+        #panel-header { padding: 16px; border-bottom: 1px solid #334155; }
+        #panel-header h1 { font-size: 1rem; font-weight: 700; color: #f1f5f9; }
+        #panel-header p { font-size: .75rem; color: #94a3b8; margin-top: 4px; }
+
+        #controls { padding: 12px 16px; border-bottom: 1px solid #334155; display: flex; flex-direction: column; gap: 8px; }
+        #controls label { font-size: .75rem; color: #94a3b8; }
+        #dept-select { width: 100%; padding: 7px 10px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #f1f5f9; font-size: .85rem; }
+        #dept-select:focus { outline: none; border-color: #3b82f6; }
+
+        .btn { padding: 8px 14px; border-radius: 8px; border: none; font-size: .8rem; font-weight: 700; cursor: pointer; transition: all .15s; }
+        .btn-blue  { background: #3b82f6; color: #fff; }
+        .btn-blue:hover  { background: #2563eb; }
+        .btn-green { background: #10b981; color: #fff; }
+        .btn-green:hover { background: #059669; }
+        .btn-red   { background: #ef4444; color: #fff; }
+        .btn-red:hover   { background: #dc2626; }
+        .btn-row { display: flex; gap: 6px; flex-wrap: wrap; }
+
+        #mode-info { font-size: .72rem; background: #0f172a; border-radius: 6px; padding: 8px 10px; color: #94a3b8; line-height: 1.5; }
+        #mode-info span { color: #fbbf24; font-weight: 700; }
+
+        #dept-list { flex: 1; overflow-y: auto; padding: 8px; }
+        .dept-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 10px; border-radius: 6px; font-size: .78rem; cursor: pointer; transition: background .15s; }
+        .dept-item:hover { background: #334155; }
+        .dept-item.active { background: #1d4ed8; }
+        .dept-item.done { color: #10b981; }
+        .dept-item .badge { font-size: .65rem; background: #334155; padding: 2px 6px; border-radius: 10px; }
+        .dept-item.done .badge { background: #064e3b; color: #10b981; }
+
+        #export-zone { padding: 12px 16px; border-top: 1px solid #334155; }
+
+        /* CANVAS ZONE */
+        #canvas-zone { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        #toolbar { padding: 10px 16px; background: #1e293b; border-bottom: 1px solid #334155; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        #toolbar label { font-size: .75rem; color: #94a3b8; }
+        #zoom-range { width: 120px; }
+        #coords-display { font-size: .72rem; color: #64748b; margin-left: auto; font-family: monospace; }
+
+        #canvas-wrap { flex: 1; overflow: auto; position: relative; background: #0f172a; cursor: crosshair; }
+        #canvas-wrap canvas { display: block; }
+
+        /* PREVIEW */
+        #preview-zone { width: 260px; min-width: 260px; background: #1e293b; border-left: 1px solid #334155; display: flex; flex-direction: column; }
+        #preview-zone h2 { font-size: .85rem; padding: 14px 16px; border-bottom: 1px solid #334155; color: #94a3b8; }
+        #preview-cards { padding: 10px; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; flex: 1; }
+        .preview-card { background: #0f172a; border-radius: 10px; overflow: hidden; border: 1px solid #334155; }
+        .preview-card-img { width: 100%; height: 80px; background: #1e293b; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .preview-card-img canvas { max-width: 100%; max-height: 80px; }
+        .preview-card-label { padding: 6px 8px; font-size: .72rem; color: #94a3b8; text-align: center; }
+
+        #json-out { padding: 12px; background: #0f172a; border-radius: 8px; font-family: monospace; font-size: .65rem; color: #86efac; white-space: pre-wrap; max-height: 200px; overflow-y: auto; border: 1px solid #334155; }
+    </style>
+</head>
+<body>
+
+<!-- PANEL IZQUIERDO -->
+<div id="panel">
+    <div id="panel-header">
+        <h1>🗺️ Sprite Mapper</h1>
+        <p>Marca el bounding box de cada departamento en la imagen.</p>
+    </div>
+
+    <div id="controls">
+        <label>Departamento activo:</label>
+        <select id="dept-select"></select>
+        <div id="mode-info">
+            Modo: <span id="mode-label">Esperando...</span><br>
+            Haz clic y arrastra para marcar el rectángulo de cada silueta.
+        </div>
+        <div class="btn-row">
+            <button class="btn btn-red" onclick="clearCurrent()">🗑 Borrar actual</button>
+            <button class="btn btn-blue" onclick="nextDept()">Siguiente →</button>
+        </div>
+    </div>
+
+    <div id="dept-list"></div>
+
+    <div id="export-zone">
+        <button class="btn btn-green" style="width:100%" onclick="exportJSON()">⬇ Exportar JSON</button>
+    </div>
+</div>
+
+<!-- CANVAS PRINCIPAL -->
+<div id="canvas-zone">
+    <div id="toolbar">
+        <label>Zoom:</label>
+        <input type="range" id="zoom-range" min="50" max="300" value="100" oninput="setZoom(this.value)">
+        <span id="zoom-label">100%</span>
+        <button class="btn btn-blue" onclick="setZoom(100)">1:1</button>
+        <button class="btn btn-blue" onclick="fitImage()">Ajustar</button>
+        <span id="coords-display">x: — y: —</span>
+    </div>
+    <div id="canvas-wrap">
+        <canvas id="main-canvas"></canvas>
+    </div>
+</div>
+
+<!-- PANEL DERECHO: PREVIEW -->
+<div id="preview-zone">
+    <h2>Vista previa de recortes</h2>
+    <div id="preview-cards"></div>
+</div>
+
+<script>
+const DEPTS = [
+    { id: 'amazonas',           name: 'Amazonas',              color: '#3fc2ff' },
+    { id: 'antioquia',          name: 'Antioquia',             color: '#c1cf00' },
+    { id: 'arauca',             name: 'Arauca',                color: '#2e8b57' },
+    { id: 'atlantico',          name: 'Atlántico',             color: '#e8962e' },
+    { id: 'bolivar',            name: 'Bolívar',               color: '#a8324e' },
+    { id: 'boyaca',             name: 'Boyacá',                color: '#6b5ce7' },
+    { id: 'caldas',             name: 'Caldas',                color: '#f5a623' },
+    { id: 'caqueta',            name: 'Caquetá',               color: '#1e8140' },
+    { id: 'casanare',           name: 'Casanare',              color: '#d4503a' },
+    { id: 'cauca',              name: 'Cauca',                 color: '#8b5cf6' },
+    { id: 'cesar',              name: 'Cesar',                 color: '#e8a817' },
+    { id: 'choco',              name: 'Chocó',                 color: '#e85d24' },
+    { id: 'cordoba',            name: 'Córdoba',               color: '#3a9d5c' },
+    { id: 'cundinamarca',       name: 'Cundinamarca',          color: '#c0392b' },
+    { id: 'guainia',            name: 'Guainía',               color: '#0891b2' },
+    { id: 'guaviare',           name: 'Guaviare',              color: '#059669' },
+    { id: 'huila',              name: 'Huila',                 color: '#d97706' },
+    { id: 'la-guajira',         name: 'La Guajira',            color: '#f59e0b' },
+    { id: 'magdalena',          name: 'Magdalena',             color: '#2563eb' },
+    { id: 'meta',               name: 'Meta',                  color: '#8c2d2d' },
+    { id: 'narino',             name: 'Nariño',                color: '#16a34a' },
+    { id: 'norte-de-santander', name: 'Norte de Santander',    color: '#006411' },
+    { id: 'putumayo',           name: 'Putumayo',              color: '#0d9488' },
+    { id: 'quindio',            name: 'Quindío',               color: '#22c55e' },
+    { id: 'risaralda',          name: 'Risaralda',             color: '#f97316' },
+    { id: 'san-andres',         name: 'San Andrés',            color: '#06b6d4' },
+    { id: 'santander',          name: 'Santander',             color: '#4f46e5' },
+    { id: 'sucre',              name: 'Sucre',                 color: '#10b981' },
+    { id: 'tolima',             name: 'Tolima',                color: '#dc2626' },
+    { id: 'valle-del-cauca',    name: 'Valle del Cauca',       color: '#7c3aed' },
+    { id: 'vaupes',             name: 'Vaupés',                color: '#0284c7' },
+    { id: 'vichada',            name: 'Vichada',               color: '#991b1b' },
+];
+
+// Estado
+const coords = {};      // { id: {x,y,w,h} } en coordenadas de imagen original
+let activeDept = DEPTS[0].id;
+let zoom = 1;
+let img = new Image();
+let imgLoaded = false;
+let dragging = false;
+let dragStart = null;
+let dragCurrent = null;
+
+// Canvas
+const canvas = document.getElementById('main-canvas');
+const ctx = canvas.getContext('2d');
+
+// Cargar imagen
+img.onload = () => {
+    imgLoaded = true;
+    fitImage();
+    render();
+};
+img.onerror = () => {
+    ctx.fillStyle = '#334155';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#f87171';
+    ctx.font = '14px Segoe UI';
+    ctx.fillText('No se encontró la imagen. Asegúrate de abrir este HTML', 20, 40);
+    ctx.fillText('desde la raíz del proyecto (donde está /img/)', 20, 60);
+};
+img.src = '../img/cada departamento mapas.jpg';
+
+// Poblar select y lista
+const select = document.getElementById('dept-select');
+const list   = document.getElementById('dept-list');
+DEPTS.forEach((d, i) => {
+    const opt = document.createElement('option');
+    opt.value = d.id; opt.textContent = d.name;
+    select.appendChild(opt);
+
+    const item = document.createElement('div');
+    item.className = 'dept-item' + (i === 0 ? ' active' : '');
+    item.id = 'li-' + d.id;
+    item.innerHTML = `<span>${d.name}</span><span class="badge" id="badge-${d.id}">–</span>`;
+    item.onclick = () => setActive(d.id);
+    list.appendChild(item);
+});
+select.onchange = () => setActive(select.value);
+
+function setActive(id) {
+    activeDept = id;
+    select.value = id;
+    document.querySelectorAll('.dept-item').forEach(el => el.classList.remove('active'));
+    const li = document.getElementById('li-' + id);
+    if (li) { li.classList.add('active'); li.scrollIntoView({ block: 'nearest' }); }
+    document.getElementById('mode-label').textContent = 'Dibujando: ' + DEPTS.find(d=>d.id===id).name;
+    render();
+}
+setActive(activeDept);
+
+// Zoom
+function setZoom(val) {
+    zoom = parseInt(val) / 100;
+    document.getElementById('zoom-label').textContent = val + '%';
+    document.getElementById('zoom-range').value = val;
+    if (imgLoaded) {
+        canvas.width  = Math.round(img.naturalWidth  * zoom);
+        canvas.height = Math.round(img.naturalHeight * zoom);
+    }
+    render();
+}
+
+function fitImage() {
+    if (!imgLoaded) return;
+    const wrap = document.getElementById('canvas-wrap');
+    const scaleW = (wrap.clientWidth  - 20) / img.naturalWidth;
+    const scaleH = (wrap.clientHeight - 20) / img.naturalHeight;
+    const scale  = Math.min(scaleW, scaleH, 1);
+    setZoom(Math.round(scale * 100));
+}
+
+// Render
+function render() {
+    if (!imgLoaded) return;
+    canvas.width  = Math.round(img.naturalWidth  * zoom);
+    canvas.height = Math.round(img.naturalHeight * zoom);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+    // Dibujar todos los recuadros guardados
+    DEPTS.forEach(d => {
+        const c = coords[d.id];
+        if (!c) return;
+        const isActive = d.id === activeDept;
+        ctx.strokeStyle = isActive ? '#facc15' : d.color;
+        ctx.lineWidth   = isActive ? 2.5 : 1.5;
+        ctx.globalAlpha = isActive ? 1 : 0.6;
+        ctx.strokeRect(c.x*zoom, c.y*zoom, c.w*zoom, c.h*zoom);
+        ctx.fillStyle = d.color + '33';
+        ctx.fillRect(c.x*zoom, c.y*zoom, c.w*zoom, c.h*zoom);
+        ctx.globalAlpha = 1;
+        // Label
+        ctx.fillStyle = isActive ? '#facc15' : '#fff';
+        ctx.font = `bold ${isActive ? 11 : 9}px Segoe UI`;
+        ctx.fillText(d.name, c.x*zoom + 3, c.y*zoom + (isActive ? 14 : 11));
+    });
+
+    // Recuadro en curso
+    if (dragging && dragStart && dragCurrent) {
+        const x = Math.min(dragStart.x, dragCurrent.x);
+        const y = Math.min(dragStart.y, dragCurrent.y);
+        const w = Math.abs(dragCurrent.x - dragStart.x);
+        const h = Math.abs(dragCurrent.y - dragStart.y);
+        ctx.strokeStyle = '#facc15';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([6, 3]);
+        ctx.strokeRect(x, y, w, h);
+        ctx.setLineDash([]);
+        ctx.fillStyle = 'rgba(250,204,21,0.15)';
+        ctx.fillRect(x, y, w, h);
+    }
+}
+
+// Mouse sobre canvas
+const wrap = document.getElementById('canvas-wrap');
+canvas.addEventListener('mousedown', e => {
+    if (!imgLoaded) return;
+    dragging = true;
+    const r = canvas.getBoundingClientRect();
+    dragStart = { x: e.clientX - r.left, y: e.clientY - r.top };
+    dragCurrent = { ...dragStart };
+});
+canvas.addEventListener('mousemove', e => {
+    const r = canvas.getBoundingClientRect();
+    const cx = e.clientX - r.left, cy = e.clientY - r.top;
+    document.getElementById('coords-display').textContent =
+        `x: ${Math.round(cx/zoom)}  y: ${Math.round(cy/zoom)}`;
+    if (!dragging) return;
+    dragCurrent = { x: cx, y: cy };
+    render();
+});
+canvas.addEventListener('mouseup', e => {
+    if (!dragging || !dragStart) return;
+    dragging = false;
+    const r = canvas.getBoundingClientRect();
+    const ex = e.clientX - r.left, ey = e.clientY - r.top;
+    const x = Math.min(dragStart.x, ex);
+    const y = Math.min(dragStart.y, ey);
+    const w = Math.abs(ex - dragStart.x);
+    const h = Math.abs(ey - dragStart.y);
+    if (w > 5 && h > 5) {
+        coords[activeDept] = {
+            x: Math.round(x / zoom),
+            y: Math.round(y / zoom),
+            w: Math.round(w / zoom),
+            h: Math.round(h / zoom)
+        };
+        updateBadge(activeDept);
+        updatePreview(activeDept);
+    }
+    dragStart = null; dragCurrent = null;
+    render();
+});
+
+function updateBadge(id) {
+    const c = coords[id];
+    const badge = document.getElementById('badge-' + id);
+    const li    = document.getElementById('li-'    + id);
+    if (c) {
+        badge.textContent = `${c.w}×${c.h}`;
+        li.classList.add('done');
+    }
+}
+
+// Preview recorte
+function updatePreview(id) {
+    const c = coords[id];
+    if (!c || !imgLoaded) return;
+    const d = DEPTS.find(dep => dep.id === id);
+    const existing = document.getElementById('prev-' + id);
+    const card = existing || document.createElement('div');
+    card.className = 'preview-card';
+    card.id = 'prev-' + id;
+
+    const offscreen = document.createElement('canvas');
+    offscreen.width  = c.w;
+    offscreen.height = c.h;
+    const oc = offscreen.getContext('2d');
+    oc.drawImage(img, c.x, c.y, c.w, c.h, 0, 0, c.w, c.h);
+
+    card.innerHTML = '';
+    const imgWrap = document.createElement('div');
+    imgWrap.className = 'preview-card-img';
+    // Escalar preview
+    const previewCanvas = document.createElement('canvas');
+    const scale = Math.min(238/c.w, 80/c.h, 1);
+    previewCanvas.width  = Math.round(c.w * scale);
+    previewCanvas.height = Math.round(c.h * scale);
+    const pc = previewCanvas.getContext('2d');
+    pc.drawImage(offscreen, 0, 0, previewCanvas.width, previewCanvas.height);
+    imgWrap.appendChild(previewCanvas);
+
+    const label = document.createElement('div');
+    label.className = 'preview-card-label';
+    label.textContent = `${d.name} — ${c.w}×${c.h}px`;
+
+    card.appendChild(imgWrap);
+    card.appendChild(label);
+    if (!existing) document.getElementById('preview-cards').appendChild(card);
+}
+
+function clearCurrent() {
+    delete coords[activeDept];
+    const badge = document.getElementById('badge-' + activeDept);
+    const li    = document.getElementById('li-'    + activeDept);
+    badge.textContent = '–';
+    li.classList.remove('done');
+    const prev = document.getElementById('prev-' + activeDept);
+    if (prev) prev.remove();
+    render();
+}
+
+function nextDept() {
+    const idx = DEPTS.findIndex(d => d.id === activeDept);
+    if (idx < DEPTS.length - 1) setActive(DEPTS[idx + 1].id);
+}
+
+function exportJSON() {
+    const result = {};
+    DEPTS.forEach(d => {
+        if (coords[d.id]) result[d.id] = { ...coords[d.id], name: d.name, color: d.color };
+    });
+    const json = JSON.stringify(result, null, 2);
+
+    // Mostrar en panel
+    let out = document.getElementById('json-out');
+    if (!out) {
+        out = document.createElement('pre');
+        out.id = 'json-out';
+        document.getElementById('export-zone').appendChild(out);
+    }
+    out.textContent = json;
+
+    // Descargar archivo
+    const blob = new Blob([json], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'dept-coords.json';
+    a.click();
+
+    const done = Object.keys(result).length;
+    alert(`✅ Exportado: ${done}/${DEPTS.length} departamentos mapeados.\nArchivo: dept-coords.json`);
+}
+</script>
+</body>
+</html>

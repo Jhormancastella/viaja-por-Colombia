@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Chocó - Viaja por Colombia</title>
+    <style>:root { --dept-color: #e85d24; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Chocó</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="choco" data-color="#e85d24" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Chocó</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🌊 Pacífica</span>
+                <span class="dept-badge">🏛 Capital: Quibdó</span>
+                <span class="dept-badge">🌡 Muy húmedo · 27 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Quibdó</span></div>
+                <div class="info-item"><strong>Región</strong><span>Pacífica</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>30</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Chocoano/a</span></div>
+                <div class="info-item"><strong>Área</strong><span>46,530 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Tropical lluvioso · 27 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Nuquí y Bahía Solano — Avistamiento de ballenas</li>
+                <li>Playa El Almejal</li>
+                <li>Parque Nacional Natural Utría</li>
+                <li>Río Atrato — Sujeto de derechos</li>
+                <li>Capurganá y Sapzurro — Caribe selvático</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🐟</span>
+                    <div class="plato-text"><strong>Tapao de Pescado</strong><span>Pescado del Pacífico cocinado en caldo de coco con plátano verde y cilantro cimarrón.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍲</span>
+                    <div class="plato-text"><strong>Pusandao</strong><span>Sopa de cerdo con maíz, papa y plátano, contundente cocido chocoano.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🫓</span>
+                    <div class="plato-text"><strong>Pan de Pandebono</strong><span>Pan de almidón de yuca con queso, crujiente y suave al mismo tiempo.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🥥</span>
+                    <div class="plato-text"><strong>Arroz Apastelado</strong><span>Arroz cocinado con coco y mariscos, especialidad de las costas chocoanas.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Chocó</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

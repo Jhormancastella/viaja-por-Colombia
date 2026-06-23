@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Vichada - Viaja por Colombia</title>
+    <style>:root { --dept-color: #991b1b; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Vichada</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="vichada" data-color="#991b1b" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Vichada</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🐄 Orinoquía</span>
+                <span class="dept-badge">🏛 Capital: Puerto Carreño</span>
+                <span class="dept-badge">🌡 Tropical · 27 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Puerto Carreño</span></div>
+                <div class="info-item"><strong>Región</strong><span>Orinoquía</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>4</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Vichadense</span></div>
+                <div class="info-item"><strong>Área</strong><span>100,242 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Tropical seco y húmedo · 27 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Parque Nacional Natural El Tuparro</li>
+                <li>Raudal de Maipures</li>
+                <li>Río Orinoco — Frontera con Venezuela</li>
+                <li>Caño Morichal</li>
+                <li>Puerto Carreño — Confluencia Orinoco-Meta</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🥩</span>
+                    <div class="plato-text"><strong>Mamona Llanera</strong><span>Ternera asada sobre estacas en leña, el asado más tradicional de los Llanos.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🐟</span>
+                    <div class="plato-text"><strong>Pescado del Orinoco</strong><span>Cachama, laulau y pavón frescos del gran río, asados o en caldo.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🫓</span>
+                    <div class="plato-text"><strong>Casabe Llanero</strong><span>Pan plano de yuca brava, presente en todas las mesas del Vichada.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍲</span>
+                    <div class="plato-text"><strong>Sancocho Llanero</strong><span>Sopa de carne de res con yuca, plátano y papa, contundente y reconfortante.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Vichada</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

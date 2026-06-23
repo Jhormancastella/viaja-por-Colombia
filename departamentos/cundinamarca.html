@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Cundinamarca - Viaja por Colombia</title>
+    <style>:root { --dept-color: #c0392b; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Cundinamarca</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="cundinamarca" data-color="#c0392b" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Cundinamarca</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🏔️ Andina</span>
+                <span class="dept-badge">🏛 Capital: Bogotá (D.C.)</span>
+                <span class="dept-badge">🌡 Frío · 14 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Bogotá D.C.</span></div>
+                <div class="info-item"><strong>Región</strong><span>Andina</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>116</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Cundinamarqués/a</span></div>
+                <div class="info-item"><strong>Área</strong><span>24,210 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Frío · 14 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Catedral de Sal de Zipaquirá</li>
+                <li>Laguna de Guatavita — El Dorado</li>
+                <li>Chingaza — Páramo y reserva hídrica</li>
+                <li>Villeta — Valle del Magdalena</li>
+                <li>Mesa de Los Santos</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🍲</span>
+                    <div class="plato-text"><strong>Ajiaco Bogotano</strong><span>Sopa de tres papas (criolla, pastusa, sabanera) con pollo y guascas. Plato nacional.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🥘</span>
+                    <div class="plato-text"><strong>Cuchuco de Trigo</strong><span>Sopa espesa de trigo partido con papa, espinazo de cerdo y arveja.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍮</span>
+                    <div class="plato-text"><strong>Merengón</strong><span>Postre de merengue con fresas y crema chantilly, dulce bogotano por excelencia.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🫓</span>
+                    <div class="plato-text"><strong>Changua</strong><span>Sopa de leche con huevo y cebolla larga, desayuno clásico del altiplano.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Cundinamarca</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

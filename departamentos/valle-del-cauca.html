@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Valle del Cauca - Viaja por Colombia</title>
+    <style>:root { --dept-color: #7c3aed; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Valle del Cauca</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="valle-del-cauca" data-color="#7c3aed" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Valle del Cauca</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">💃 Andina / Pacífico</span>
+                <span class="dept-badge">🏛 Capital: Cali</span>
+                <span class="dept-badge">🌡 Cálido · 25 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>Cali</span></div>
+                <div class="info-item"><strong>Región</strong><span>Andina / Pacífico</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>42</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Vallecaucano/a - Caleño/a</span></div>
+                <div class="info-item"><strong>Área</strong><span>22,140 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Cálido · 25 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Feria de Cali — Capital mundial de la Salsa</li>
+                <li>Cristo Rey</li>
+                <li>Buenaventura — Puerto del Pacífico</li>
+                <li>Buga — Basílica del Señor de los Milagros</li>
+                <li>Lago Calima</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🍲</span>
+                    <div class="plato-text"><strong>Sancocho de Gallina Valluno</strong><span>Sopa de gallina criolla con mazorca, papa, yuca y cilantro cimarrón.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🥤</span>
+                    <div class="plato-text"><strong>Champús Caleño</strong><span>Bebida de maíz, lulo, piña y hojas de naranjo, fresca y festiva en las ferias.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🐷</span>
+                    <div class="plato-text"><strong>Marranitas</strong><span>Patacones de plátano verde rellenos de chicharrón, fritos y crujientes.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🐟</span>
+                    <div class="plato-text"><strong>Tapao de Pescado Pacífico</strong><span>Pescado del Pacífico cocinado en coco con plátano verde y cilantro cimarrón.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Valle del Cauca</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

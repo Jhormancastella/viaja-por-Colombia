@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Guaviare - Viaja por Colombia</title>
+    <style>:root { --dept-color: #059669; }</style>
+</head>
+<body class="dept-page">
+    <header class="dept-header">
+        <h1>Guaviare</h1>
+        <a href="../index.html" class="back-btn">← Volver</a>
+    </header>
+    <div class="dept-hero">
+        <div class="dept-hero-map"><canvas data-dept="guaviare" data-color="#059669" data-size="130"></canvas></div>
+        <div class="dept-hero-info">
+            <h2>Guaviare</h2>
+            <div class="dept-hero-badges">
+                <span class="dept-badge">🌿 Amazonía</span>
+                <span class="dept-badge">🏛 Capital: San José del Guaviare</span>
+                <span class="dept-badge">🌡 Cálido · 26 °C</span>
+            </div>
+        </div>
+    </div>
+    <nav class="dept-tabs">
+        <a href="#info" class="dept-tab active">ℹ️ Info</a>
+        <a href="#lugares" class="dept-tab">📍 Lugares</a>
+        <a href="#gastronomia" class="dept-tab">🍽 Gastronomía</a>
+    </nav>
+    <div class="page-wrap">
+        <section id="info">
+            <h2>ℹ️ Información General</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>Capital</strong><span>San José del Guaviare</span></div>
+                <div class="info-item"><strong>Región</strong><span>Amazonía</span></div>
+                <div class="info-item"><strong>Municipios</strong><span>4</span></div>
+                <div class="info-item"><strong>Gentilicio</strong><span>Guaviarense</span></div>
+                <div class="info-item"><strong>Área</strong><span>53,460 km²</span></div>
+                <div class="info-item"><strong>Clima</strong><span>Cálido húmedo · 26 °C prom.</span></div>
+            </div>
+        </section>
+        <section id="lugares" class="descripcion">
+            <h2>📍 Puntos de interés</h2>
+            <ul>
+                <li>Ciudad de Piedra — Formaciones rocosas únicas</li>
+                <li>Raudal del Guayabero</li>
+                <li>Serranía de Chiribiquete (parte)</li>
+                <li>Caño Cristales — Río de los 5 colores (acceso)</li>
+                <li>Pozos naturales de Tomachipán</li>
+            </ul>
+        </section>
+        <section id="gastronomia">
+            <h2>🍽️ Gastronomía</h2>
+            <div class="platos-grid">
+                <div class="plato-item">
+                    <span class="plato-emoji">🐟</span>
+                    <div class="plato-text"><strong>Cachama Asada</strong><span>Pez de aguas cálidas asado con limón y sal, clásico amazónico.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍲</span>
+                    <div class="plato-text"><strong>Caldo de Piraña</strong><span>Sopa de piraña del río Guaviare con yuca y hierbas silvestres.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🫓</span>
+                    <div class="plato-text"><strong>Casabe y Mañoco</strong><span>Preparaciones de yuca brava, base alimentaria de las comunidades locales.</span></div>
+                </div>
+                <div class="plato-item">
+                    <span class="plato-emoji">🍌</span>
+                    <div class="plato-text"><strong>Chontaduro Fresco</strong><span>Fruto amazónico cocido, rico en proteína y energía.</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer"><p>© 2026 Viaja por Colombia · Guaviare</p></footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+    <script src="../js/dept-coords.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
