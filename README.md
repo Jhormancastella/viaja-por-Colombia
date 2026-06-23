@@ -2,7 +2,13 @@
 
 > Sitio web educativo e interactivo que explora los **32 departamentos de Colombia** a través de mapas, puntos de interés, galerías fotográficas y gastronomía regional.
 
-[![Colombia](https://img.shields.io/badge/Explora-Colombia-FFCC00?style=for-the-badge)](https://github.com/Jhormancastella/viaja-por-Colombia)
+<div align="center">
+
+[![Ver en vivo](https://img.shields.io/badge/🌐%20Ver%20en%20vivo-GitHub%20Pages-0a1628?style=for-the-badge&logo=github&logoColor=white)](https://jhormancastella.github.io/viaja-por-Colombia/)
+
+</div>
+
+[![Colombia](https://img.shields.io/badge/Explora-Colombia-FFCC00?style=for-the-badge)](https://jhormancastella.github.io/viaja-por-Colombia/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
@@ -208,6 +214,7 @@ Este proyecto está bajo la licencia **MIT**. Consulta el archivo [LICENSE](LICE
 **Jhorman Jesús Castellanos Morales**
 - GitHub: [@Jhormancastella](https://github.com/Jhormancastella)
 - Proyecto: [viaja-por-Colombia](https://github.com/Jhormancastella/viaja-por-Colombia)
+- 🌐 Demo: [jhormancastella.github.io/viaja-por-Colombia](https://jhormancastella.github.io/viaja-por-Colombia/)
 
 ---
 
